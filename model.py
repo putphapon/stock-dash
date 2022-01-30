@@ -9,6 +9,7 @@ def prediction(stock, n_days):
     import pandas as pd
     import plotly.graph_objs as go
     import plotly.express as px
+    
     # model
     from model import prediction
     from sklearn.model_selection import train_test_split
@@ -16,8 +17,8 @@ def prediction(stock, n_days):
     import numpy as np
     from sklearn.svm import SVR
     from datetime import date, timedelta
+    
     # load the data
-
     df = yf.download(stock, period='60d')
     df.reset_index(inplace=True)
     df['Day'] = df.index
@@ -64,7 +65,6 @@ def prediction(stock, n_days):
     # Support Vector Regression Models
 
     # RBF model
-    #rbf_svr = SVR(kernel='rbf', C=1000.0, gamma=4.0)
     rbf_svr = best_svr
 
     rbf_svr.fit(x_train, y_train)
@@ -80,17 +80,6 @@ def prediction(stock, n_days):
         dates.append(current)
 
     # plot Results
-    # fig = go.Figure()
-    # fig.add_trace(
-    #     go.Scatter(x=np.array(x_test).flatten(),
-    #                y=y_test.values.flatten(),
-    #                mode='markers',
-    #                name='data'))
-    # fig.add_trace(
-    #     go.Scatter(x=np.array(x_test).flatten(),
-    #                y=rbf_svr.predict(x_test),
-    #                mode='lines+markers',
-    #                name='test'))
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(
@@ -101,8 +90,7 @@ def prediction(stock, n_days):
     fig.update_layout(
         title="Predicted Close Price of next " + str(n_days - 1) + " days",
         xaxis_title="Date",
-        yaxis_title="Closed Price",
-        # legend_title="Legend Title",
+        yaxis_title="Closed Price"
     )
 
     return fig

@@ -23,12 +23,12 @@ body {
   background-color: rgb(5, 107, 107);
 }
 
-.content {
+/* .content {
   width: 65vw;
   padding: 1rem 5rem;
-}
+} */
 
-.start {
+/* .start {
   margin-top: 2rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -39,44 +39,44 @@ body {
 .input-place p {
   color: antiquewhite;
   font-size: larger;
-}
-.form {
+} */
+/* .form {
   display: flex;
   margin-top: 1rem;
   margin-bottom: 2rem;
   height: 1.5rem;
-}
-.form button {
+} */
+/* .form button {
   width: 5rem;
   background-color: yellow;
   color: black;
   border: none;
-}
-.buttons {
+} */
+/* .buttons {
   margin: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   justify-content: space-around;
-}
-#forecast {
+} */
+/* #forecast {
   margin-top: 2rem;
   height: 2.2rem;
-}
-#n_days {
+} */
+/* #n_days {
   height: 2rem;
   margin-top: 2rem;
-}
-.buttons button {
+} */
+/* .buttons button {
   width: 7.5rem;
   height: 2.5rem;
   border: none;
   background-color: rgb(166, 255, 0);
   color: rgb(0, 0, 0);
-}
+} */
 
-.header {
+/* .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -86,9 +86,9 @@ body {
   font-size: 4rem;
   margin-left: 3rem;
   line-height: 80%;
-}
+} */
 
-#logo {
+/* #logo {
   max-width: 15rem;
   height: auto;
-}
+} */
